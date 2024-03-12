@@ -1,4 +1,5 @@
 ﻿using Medium.Domain.Entity;
+using Medium.Domain.Entity.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
