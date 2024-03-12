@@ -42,5 +42,23 @@ namespace MediumApi.Controllers
 
             return Ok(result);
         }
+        [HttpDelete]
+        public async Task<IActionResult> DeleteUser(Guid id)
+        {
+            var result = await _mediator.Send(new DeleteUserCommand()
+            {
+                Id = id
+            }) ;
+
+            return Ok("Ochirildi");
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<User>> UpdateUser(UpdateUserCommand command)
+        {
+            var result = await _mediator.Send(command);
+
+            return Ok(result);
+        }
     }
 }
