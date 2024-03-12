@@ -1,4 +1,4 @@
-@MediumApi_HostAddress = http://localhost:5110
+@MediumApi_HostAddress = http://localhost:5186
 
 GET {{MediumApi_HostAddress}}/weatherforecast/
 Accept: application/json

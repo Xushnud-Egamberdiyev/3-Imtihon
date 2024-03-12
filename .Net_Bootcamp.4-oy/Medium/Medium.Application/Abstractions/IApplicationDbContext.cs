@@ -11,8 +11,9 @@ namespace Medium.Application.Abstractions
 {
     public interface IApplicationDbContext
     {
+       
         public DbSet<User> Users { get; set; }
 
-        Task SavaChagesAsync(CancellationToken cancellationToken);
+        Task<int> SavaChagesAsync(CancellationToken cancellationToken = default);
     }
 }

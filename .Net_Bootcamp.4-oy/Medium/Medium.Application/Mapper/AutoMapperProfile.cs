@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Medium.Application.Commads;
 using Medium.Domain.Entity.DTOs;
 using Medium.Domain.Entity.Model;
 using System;
@@ -13,7 +14,7 @@ namespace Medium.Application.Mapper
     {
         public AutoMapperProfile() 
         {
-            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<User, CreateUserCommand>().ReverseMap();
         }
     }
 }
