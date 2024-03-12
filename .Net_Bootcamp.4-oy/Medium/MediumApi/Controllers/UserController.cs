@@ -1,7 +1,5 @@
 ﻿using MediatR;
 using Medium.Application.Commads;
-using Medium.Domain.Entity.DTOs;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MediumApi.Controllers

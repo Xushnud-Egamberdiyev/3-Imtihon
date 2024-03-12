@@ -2,14 +2,7 @@
 using MediatR;
 using Medium.Application.Abstractions;
 using Medium.Application.Commads;
-using Medium.Domain.Entity;
 using Medium.Domain.Entity.Model;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Medium.Application.Handles
 {
@@ -21,10 +14,10 @@ namespace Medium.Application.Handles
         public CreateUserCommandHandler(IApplicationDbContext context, IMapper mapper)
         {
             _context = context;
-            _mapper = mapper; 
+            _mapper = mapper;
         }
 
-        
+
 
         protected async override Task Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
