@@ -16,6 +16,6 @@
         public DateTimeOffset JoinData { get; set; } = DateTimeOffset.UtcNow;
         public DateTimeOffset ModifiedData { get; set; }
         public DateTimeOffset DeleteData { get; set; }
-        public bool IsSeleted { get; set; } = false;
+        public bool Isdeleted { get; set; } = false;
     }
 }

@@ -1,10 +1,12 @@
 ﻿using MediatR;
 using Medium.Application.Commads;
+using Medium.Application.Queries;
+using Medium.Domain.Entity.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MediumApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -21,6 +23,24 @@ namespace MediumApi.Controllers
             await _mediator.Send(command);
 
             return Ok("Malumot yaratildi");
+        }
+        [HttpGet]
+        public async Task<ActionResult<List<User>>> GetAll()
+        {
+            var result = await _mediator.Send(new GetAllUserCommandQuery());
+
+            return result;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<User>> GetById(Guid id)
+        {
+            var result = await _mediator.Send(new GetByIdCommandQuery()
+            {
+                id = id
+            }) ;
+
+            return Ok(result);
         }
     }
 }
