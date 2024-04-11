@@ -19,7 +19,7 @@ namespace Email_Homework
             builder.Services.AddControllers();
 
             builder.Services.AddApplication();
-            builder.Services.AddInfrastructure(builder.Configuration);
+            builder.Services.AddInfrastructure( builder.Configuration );
 
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -36,7 +36,7 @@ namespace Email_Homework
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.Http,
-                    Scheme = "bearer",
+                    Scheme = " bearer ",
                     Reference = new OpenApiReference
                     {
                         Type = ReferenceType.SecurityScheme,
